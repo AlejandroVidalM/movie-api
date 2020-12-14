@@ -9,11 +9,19 @@
   
     <!-- Name Column -->
     <ng-container matColumnDef="popularity">
-        <th mat-header-cell *matHeaderCellDef> Popularidad </th>
-        <td mat-cell *matCellDef="let element"> {{element.popularity}} </td>
+      <th mat-header-cell *matHeaderCellDef> Popularidad </th>
+      <td mat-cell *matCellDef="let element"> {{element.popularity}} </td>
+    </ng-container>
+  
+    <!-- Name Column -->
+    <ng-container matColumnDef="profile_path">
+        <th mat-header-cell *matHeaderCellDef> Imagen </th>
+        <td mat-cell *matCellDef="let element"> <img [src]='imagenUrl+element.profile_path'> </td>
       </ng-container>
   
   
     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
     <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
   </table>
+  
+  <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]"></mat-paginator>

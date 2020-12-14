@@ -8,6 +8,7 @@ import { ActoresComponent } from './actores/actores.component';
 import { MatTableModule } from '@angular/material/table'  
 import { PeopleService } from './services/people.service';
 import { HttpClientModule } from '@angular/common/http';
+import {MatPaginatorModule} from '@angular/material/paginator';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { HttpClientModule } from '@angular/common/http';
     BrowserAnimationsModule,
     MatSliderModule,
     MatTableModule,
-    HttpClientModule
+    HttpClientModule,
+    MatPaginatorModule
   ],
   providers: [PeopleService],
   bootstrap: [AppComponent]
